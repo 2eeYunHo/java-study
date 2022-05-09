@@ -1,11 +1,9 @@
 package echo;
 
 import java.io.IOException;
-
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 
 public class EchoServer {
 	private static final int PORT = 5555;
@@ -25,10 +23,10 @@ public class EchoServer {
 			log("starts... [Port : " + PORT + " ]");
 			// 3. accept
 			// . .클라이언트로 부터 요청을 기다린다.
-			while (true) {
-				Socket socket = serverSocket.accept(); // blocking
+			while(true) {
+				Socket socket = serverSocket.accept();
+				new EchoServerReceiveThread(socket).start();
 			}
-
 		} catch (IOException e) {
 			System.out.println("[Server] Error : " + e);
 		} finally {

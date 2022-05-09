@@ -9,12 +9,13 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
 
-
 public class EchoServerReceiveThread extends Thread {
 	private Socket socket;
+	
 	public EchoServerReceiveThread(Socket socket) {
 		this.socket = socket;
 	}
+	
 	@Override
 	public void run() {
 		InetSocketAddress inetSocketAddress = (InetSocketAddress) socket.getRemoteSocketAddress();
@@ -37,7 +38,7 @@ public class EchoServerReceiveThread extends Thread {
 				}
 
 				EchoServer.log("received : "+data);
-			
+				pw.println(data);
 				// 6. 데이터 쓰기
 				pw.println(data);
 			}
@@ -51,12 +52,8 @@ public class EchoServerReceiveThread extends Thread {
 					socket.close();
 				}
 			} catch (IOException ex) {
-
+				ex.printStackTrace();
 			}
 		}
-
 	}
-
-	
-
 }

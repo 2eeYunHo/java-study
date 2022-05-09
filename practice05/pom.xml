@@ -4,7 +4,7 @@
     <groupId>com.douzone</groupId>
     <artifactId>java-study</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    </parent>
+  </parent>
 	<artifactId>practice05</artifactId>
 	<packaging>jar</packaging>
 
