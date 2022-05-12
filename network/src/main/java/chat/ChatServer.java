@@ -14,6 +14,7 @@ public class ChatServer {
 	public static final int BUFFER_SIZE = 1024;
 	public static void main(String[] args) {
 		ServerSocket serverSocket = null;
+		
 		try {
 			// 1. 서버소켓 생성
 			serverSocket = new ServerSocket(PORT);

@@ -14,14 +14,14 @@ public class Methood01 {
 
         try{
             InputStream is = new ByteArrayInputStream(src);
-            OutputStream os = new ByteArrayOutputStream();
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
 
             int data = -1;
             while( (data = is.read()) != -1 ){
                 os.write(data);
             }
 
-            dest = ((ByteArrayOutputStream)os).toByteArray();
+            dest = os.toByteArray();
             System.out.println(Arrays.toString(dest));      // [0, 1, 2, 3]
         }
         catch (IOException e){

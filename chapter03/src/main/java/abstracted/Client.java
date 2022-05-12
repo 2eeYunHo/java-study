@@ -3,9 +3,9 @@ package abstracted;
 public class Client {
 
 	public static void main(String[] args) {
-		Sandwich burger = new Bread();
-		burger.make();
-		System.out.println("-------------");
+		//Sandwich burger = new Bread();
+		//burger.make();
+		//System.out.println("-------------");
 		Sandwich sandwichWithLettuce = new LettuceDecorator(new Bread());
         sandwichWithLettuce.make();
         System.out.println("-------");

@@ -24,8 +24,13 @@ public class Drider {
 		peng1.printname("누구냐"); //펭귄클래스의 오버라이드된 printname();를 파라미터값으로 확인하여 출력
 		//peng1.name이 Penquin에전달되어 name으로출력 파리미터가 정의되지않은your네임으로 들어감
 	
-
-
+		int n[] = { 1,2,2,3,3,4,4,5};
+		int arr[] = new int [n.length];
+		for(int i =0;i<arr.length;i++) {
+			System.out.println(n[i]);
+			arr[i] = i;
+			System.out.println(arr[i]);
+		}
 		me.name = "윤호";
 //		me.printHabit(); 위내용과 같음
 		me.printname(); // ㅇㅇ
