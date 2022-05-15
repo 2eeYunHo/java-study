@@ -38,7 +38,6 @@ public class EchoServerReceiveThread extends Thread {
 				}
 
 				EchoServer.log("received : "+data);
-				pw.println(data);
 				// 6. 데이터 쓰기
 				pw.println(data);
 			}

@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class EchoServer {
-	private static final int PORT = 5555;
+	private static final int PORT = 8888;
 
 	public static void main(String[] args) {
 
@@ -30,6 +30,7 @@ public class EchoServer {
 		} catch (IOException e) {
 			System.out.println("[Server] Error : " + e);
 		} finally {
+			
 			try {
 				if (serverSocket != null && !serverSocket.isClosed()) {
 					serverSocket.close();

@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class EchoClient {
 	private static final String SERVER_IP = "127.0.0.1";
-	private static final int SERVER_PORT = 5555;
+	private static final int SERVER_PORT = 8888;
 
 	public static void main(String[] args) {
 		Socket socket = null;
@@ -61,7 +61,6 @@ public class EchoClient {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	private static void log(String log) {
