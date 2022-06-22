@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class BookShop {
 
 	public static void main(String[] args) {
+		AuthorVo vo = new AuthorVo();
+		vo.setName("스테파니메이어");
+		testInsert(vo);
 		Book[] books = new Book[10];
 
 		books[0] = new Book(1, "트와일라잇", "스테파니메이어");
@@ -33,12 +36,13 @@ public class BookShop {
 		System.out.println("*****도서 정보 출력하기******");
 		displayBookInfo(books);
 	}
-
+	public 
 	private static void displayBookInfo(Book[] books) {
 		// TODO Auto-generated method stub
 		for (int j = 0; j < books.length; j++) {
 			books[j].print();
 		}
+		
 
 //		for (Book book : books) { 향상된 for문
 //			book.print();
